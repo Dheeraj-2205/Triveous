@@ -66,9 +66,18 @@ const orderSchema = new mongoose.Schema({
         default : 0
     },
 
+    orderStatus : {
+        type : String,
+        required : true,
+        default :"Processing"
+    },
+
     createdAt :{
         type : Date,
         default : Date.now
+    },
+    deliveredAt : {
+        type : Date
     }
 })
 

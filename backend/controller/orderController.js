@@ -56,7 +56,7 @@ exports.allOrders = catchAsyncError(async(req,res,next)=>{
 })
 
 exports.updateOrder = catchAsyncError(async (req,res,next)=>{
-    const order = await Order.find(req.params.id);
+    const order = await Order.findById(req.params.id);
 
     if(!order){
         return next(new ErrorHandler("This product is already delivered" , 404));

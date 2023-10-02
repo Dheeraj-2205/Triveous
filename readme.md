@@ -89,7 +89,7 @@ If the order is successfully delivered then user can access the history otherwis
 
 ## Update Status [Put]  --> Admin 
 Admin has capable to change the status    (https://triveous-1.onrender.com/api/order/651abfdb11e6d862edabfbcb)  provide order Id
->"status  : success		---->		"status"	: "delivered"
+>"status  : success		---->		"status"	: "Delivered"
 `
 		{
 			"status"  :  "Delivered"

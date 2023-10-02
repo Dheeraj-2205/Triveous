@@ -33,10 +33,6 @@ const orderSchema = new mongoose.Schema({
                 type : String,
                 required : true
             },
-            quantity : {
-                type : Number,
-                required : true
-            },
             product : {
                 type : mongoose.Schema.ObjectId,
                 ref : "Product",
@@ -49,6 +45,10 @@ const orderSchema = new mongoose.Schema({
         type : mongoose.Schema.ObjectId,
         ref : "User",
         required : true
+    },
+
+    paidAt : {
+        type :Date
     },
 
     paymentInfo :{
@@ -71,3 +71,5 @@ const orderSchema = new mongoose.Schema({
         default : Date.now
     }
 })
+
+module.exports = mongoose.model("Order", orderSchema);

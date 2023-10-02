@@ -1,2 +1,4 @@
 /node_modules
 /package-lock.json
+
+# mongodb://localhost:27017/triveous 

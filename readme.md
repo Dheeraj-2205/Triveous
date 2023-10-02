@@ -94,7 +94,7 @@ Admin has capable to change the status    (https://triveous-1.onrender.com/api/o
 		{
 			"status"  :  "Delivered"
 		}
-   `
+   
 `
 ## Delete Order 
 User want to delete there order by using this link (https://triveous-1.onrender.com/api/order/651abfdb11e6d862edabfbcb)

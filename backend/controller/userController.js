@@ -38,11 +38,8 @@ exports.Login = catchAsyncError(async(req,res,next)=>{
         return next(new ErrorHandler("Invalid Email And Password" , 401))
     }
 
-    const token = user.createJWTToken();
-    res.status(201).json({
-        success : true,
-        user,
-        token
-    })
+    sendToken(user, 200, res)
+
+    
 
 })

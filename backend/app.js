@@ -5,9 +5,15 @@ const errorHandler = require('./middleware/Error.js');
 const user = require('./routes/userRoute.js');
 const cookieParser = require('cookie-parser');
 const cart = require('./routes/cartRoute.js');
+const cors = require('cors');
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors({
+    origin : [process.env.FRONTEND_URI],
+    methods : ["GET", "POST", "PATCH", "PUT", "DELETE"],
+    credentials : true
+}));
 
 app.use("/api", product);
 app.use("/api", user)

@@ -14,7 +14,7 @@ process.on("uncaughtException", (err) =>{
 connectDb();
 
 const server = app.listen(process.env.PORT,()=>{
-    console.log(`server is running on PORT NO ${process.env.PORT}`);
+    console.log(`server is running on PORT NO ${process.env.PORT} in ${process.env.NODE_ENV}Mode`);
 })
 
 process.on("unhandledRejection", (err)=>{

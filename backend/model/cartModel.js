@@ -49,5 +49,25 @@ const orderSchema = new mongoose.Schema({
         type : mongoose.Schema.ObjectId,
         ref : "User",
         required : true
+    },
+
+    paymentInfo :{
+        id: {
+            type : String,
+            required : true
+        },
+        status : {
+            type : String,
+            required : true
+        }
+    },
+    itemsPrice : {
+        type : Number,
+        default : 0
+    },
+
+    createdAt :{
+        type : Date,
+        default : Date.now
     }
 })

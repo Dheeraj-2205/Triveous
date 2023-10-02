@@ -20,7 +20,10 @@ const userSchema = new mongoose.Schema({
         required : [true , "Enter your password"]
     },
 
-    
+    role : {
+        type : String,
+        default : "user"
+    }
 });
 
 

@@ -11,7 +11,6 @@ const isAuthenticated = catchAsyncError(async(req,res,next) =>{
     }
 
     const decode = jwt.verify(token,process.env.JWT_SECRET);
-    console.log(decode);
 
     req.user = await User.findById(decode.id);
 
@@ -19,4 +18,17 @@ const isAuthenticated = catchAsyncError(async(req,res,next) =>{
 
 })
 
-module.exports = isAuthenticated
+const authorizeRole = (...role) =>{
+    return (req,res,next) =>{
+        if(!role.includes(req.user.role)){
+            next(new ErrorHandler(`you are ${req.user.role} not admin`));
+        }
+        next();
+    }
+}
+
+
+
+module.exports = {isAuthenticated, authorizeRole}
+
+

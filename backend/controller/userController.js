@@ -2,6 +2,8 @@ const ErrorHandler = require('../utils/errorHandler');
 const User = require('../model/userModel');
 const catchAsyncError = require('../middleware/catchAsyncError');
 const sendToken = require('../utils/jwtToken');
+
+
 exports.register = catchAsyncError(async(req,res,next)=>{
     const {name,email,password} = req.body;
 
@@ -35,4 +37,20 @@ exports.Login = catchAsyncError(async(req,res,next)=>{
 
     sendToken(user, 200, res)
 
+});
+
+
+// Logout (backup purpose)
+
+exports.Logout = catchAsyncError(async(req,res,next)=>{
+
+    res.cookie("token", null, {
+        expires : new Date(Date.now()),
+        httpOnly :true
+    })
+
+    res.status(200).json({
+        success : true,
+        message : "Logout successfully"
+    })
 })

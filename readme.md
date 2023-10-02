@@ -1,4 +1,4 @@
-In this backend project I have used modules like bcrypt, authorizations, authentication, password hashing , maintaining the cookies and deploy the entire backend project on render
+In this backend project I have used modules like bcrypt, authorizations, authentication, password hashing , maintaining the cookies and deploy the entire backend project on render platform
 
 
 ## Register [Post]

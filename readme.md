@@ -1,3 +1,6 @@
+In this backend project I have used modules like bcrypt, authorizations, authentication, password hashing , maintaining the cookies and deploy the entire backend project on render
+
+
 ## Register [Post]
 First register your name, email, password (https://triveous-1.onrender.com/api/register)
 Ex :- 
